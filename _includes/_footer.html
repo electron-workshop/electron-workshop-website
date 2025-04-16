@@ -2,53 +2,58 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4">
-          <h5 class="mb-3 text-white">Electron Workshop</h5>
-          <p class="mb-3 text-white-50">A home for the tech collective. Connect. Contribute. Collaborate.</p>
+          <h5 class="mb-3 text-white">{{ config.footer.brand.name }}</h5>
+          <p class="mb-3 text-white-50">{{ config.footer.brand.description }}</p>
           <div class="d-flex gap-3">
-            <a href="#" aria-label="GitHub"><i class="bi bi-github fs-4"></i></a>
-            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x fs-4"></i></a>
-            <a href="#" aria-label="Mastodon"><i class="bi bi-mastodon fs-4"></i></a>
-            <a href="#" aria-label="Matrix"><i class="bi bi-chat-square-text fs-4"></i></a>
+            {% for social in config.footer.socialLinks %}
+            <a href="{{ social.link }}" aria-label="{{ social.platform }}">
+              <i class="bi {{ social.icon }} fs-4"></i>
+            </a>
+            {% endfor %}
           </div>
         </div>
+  
+        {% for section in config.footer.footerLinks %}
         <div class="col-lg-2 col-md-4 mb-4">
-          <h5 class="mb-3 text-white">Site</h5>
+          <h5 class="mb-3 text-white">{{ section.heading }}</h5>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="/">Home</a></li>
-            <li class="mb-2"><a href="/about">About</a></li>
-            <li class="mb-2"><a href="/initiatives">Initiatives</a></li>
-            <li class="mb-2"><a href="/community">Community</a></li>
+            {% for link in section.links %}
+            <li class="mb-2"><a href="{{ link.link }}">{{ link.title }}</a></li>
+            {% endfor %}
           </ul>
         </div>
-        <div class="col-lg-2 col-md-4 mb-4">
-          <h5 class="mb-3 text-white">Resources</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="/events">Events</a></li>
-            <li class="mb-2"><a href="/wiki">Wiki</a></li>
-            <li class="mb-2"><a href="/services">Services</a></li>
-            <li class="mb-2"><a href="/get-involved">Get Involved</a></li>
-          </ul>
-        </div>
+        {% endfor %}
+  
         <div class="col-lg-4 col-md-4 mb-4">
-          <h5 class="mb-3 text-white">Newsletter</h5>
-          <p class="text-white-50">Stay updated with our latest news and events.</p>
-          <div class="input-group">
-            <input type="email" class="form-control" placeholder="Your email">
-            <button class="btn btn-primary" type="button">Subscribe</button>
+            <h5 class="mb-3 text-white">Newsletter</h5>
+            <p class="text-white-50">Stay updated with our latest news and events.</p>
+            <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <p class="d-none">
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+              <div class="input-group">
+                <input type="email" name="email" class="form-control" placeholder="Your email" required>
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+              <input type="hidden" name="form-name" value="newsletter">
+            </form>
           </div>
-        </div>
       </div>
+  
       <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
+  
       <div class="row">
         <div class="col-md-6 text-center text-md-start">
-          <p class="mb-0 text-white-50">&copy; {{ "now" | date: "%Y" }} Electron Workshop. All rights reserved.</p>
+          <p class="mb-0 text-white-50">&copy; {{ "now" | date: "%Y" }} {{ config.footer.brand.name }}. All rights reserved.</p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <p class="mb-0 text-white-50">
-            In collaboration with <a href="https://freesoftware.org.au">Free Software Australia</a> &middot; 
-            <a href="/contact">Contact Us</a>
+            {{ config.footer.collaborationNote.text }}
+            <a href="{{ config.footer.collaborationNote.partner.link }}">{{ config.footer.collaborationNote.partner.name }}</a> &middot;
+            <a href="{{ config.footer.collaborationNote.contactLink }}">{{ config.footer.collaborationNote.contactText }}</a>
           </p>
         </div>
       </div>
     </div>
   </footer>
+  
