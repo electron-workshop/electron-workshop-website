@@ -1,0 +1,23 @@
+
+{% include '_head.html' %}
+    
+{% include '_navbar.html' %}
+
+<main>
+
+        <style>
+            h1 { margin-top: 3rem; }
+            h2 { margin-top: 2.5rem; }
+            h3 { margin-top: 0.8rem; }
+        </style>
+        <section class="bg-body mt-5">
+            <div class="container">
+                <div class="bg-body-tertiary px-5 py-4 rounded-3 shadow">
+                    {{ content }}
+                </div>
+            </div>
+        </section>
+    
+</main>
+
+{% include '_footer.html' %}
