@@ -1,8 +1,3 @@
----
-layout: pages_layout.html
-title: Initiatives - Under Construction
----
-
 <section class="d-flex align-items-center justify-content-center text-center">
   <div>
     <h1 class="display-4 mb-3">🚧 Under Construction 🚧</h1>

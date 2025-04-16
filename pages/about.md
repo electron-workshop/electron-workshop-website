@@ -1,7 +1,4 @@
----
-layout: pages_layout.html
-title: About Electron Workshop
----
+
 
 # About Electron Workshop
 
