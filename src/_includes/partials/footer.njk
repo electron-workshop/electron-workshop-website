@@ -1,0 +1,43 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <img src="/assets/images/logo-light.svg" alt="{{ site.title }} Logo" width="160" height="42" class="footer-logo">
+        <p>From coworking space to tech collective think tank, Electron Workshop enables communities to collaborate on environmental and social challenges.</p>
+      </div>
+      
+      <div class="footer-nav">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          {% for item in site.nav %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="footer-initiatives">
+        <h3>Our Initiatives</h3>
+        <ul class="footer-links">
+          <li><a href="/network/">Electron Network</a></li>
+          <li><a href="/sprints/">Workshop Sprints</a></li>
+          <li><a href="/infrastructure/">Infrastructure Support</a></li>
+          <li><a href="/sigs/">Special Interest Groups</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Connect</h3>
+        <ul class="social-links">
+          {% for platform, url in site.social %}
+            <li><a href="{{ url }}" aria-label="{{ platform | capitalize }}" target="_blank" rel="noopener noreferrer" class="icon-{{ platform }}"></a></li>
+          {% endfor %}
+        </ul>
+        <p class="email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {{ now.getFullYear() }} {{ site.title }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

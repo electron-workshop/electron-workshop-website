@@ -1,0 +1,53 @@
+[
+    {
+      "title": "Electron Network",
+      "icon": "network.svg",
+      "shortDescription": "A federation of community groups and meetups with aligned values",
+      "benefits": [
+        "Share resources (venues, speakers, tools)",
+        "Cross-promote events and initiatives",
+        "Coordinate calendars and activities",
+        "Access collective expertise across domains",
+        "Maintain independence while benefiting from collaboration"
+      ],
+      "link": "/network/"
+    },
+    {
+      "title": "Electron Workshop Sprints",
+      "icon": "sprint.svg",
+      "shortDescription": "A structured 13-day collaborative framework to advance community projects",
+      "benefits": [
+        "Runs Wednesday through Monday (with Tuesday as a reset day)",
+        "Accommodates various expertise levels and availability",
+        "Provides clear roles for different contributors",
+        "Creates sustainable rhythms of productivity",
+        "Utilizes shared tools for coordination"
+      ],
+      "link": "/sprints/"
+    },
+    {
+      "title": "Infrastructure Support",
+      "icon": "infrastructure.svg",
+      "shortDescription": "Technical support for community organizations in partnership with Free Software Australia",
+      "benefits": [
+        "Hosting free and open source tools for community groups",
+        "Providing digital infrastructure to support collaboration",
+        "Creating documentation standards and knowledge sharing",
+        "Technical consulting for community projects"
+      ],
+      "link": "/infrastructure/"
+    },
+    {
+      "title": "Special Interest Groups (SIGs)",
+      "icon": "sig.svg",
+      "shortDescription": "Expert groups providing specialized assistance and knowledge",
+      "benefits": [
+        "Provide specialized assistance to community inquiries",
+        "Respond to calls for submissions",
+        "Develop publications and research",
+        "Serve as liaisons to universities and other institutions",
+        "Support projects needing specific expertise"
+      ],
+      "link": "/sigs/"
+    }
+  ]

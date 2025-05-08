@@ -1,0 +1,22 @@
+{
+    "name": "electron-workshop-website",
+    "version": "1.0.0",
+    "description": "Website for Electron Workshop Tech Collective Think Tank",
+    "main": "index.js",
+    "scripts": {
+      "start": "eleventy --serve",
+      "build": "eleventy",
+      "clean": "rm -rf _site"
+    },
+    "keywords": [
+      "eleventy",
+      "11ty",
+      "static-site",
+      "tech-collective"
+    ],
+    "author": "Electron Workshop",
+    "license": "MIT",
+    "devDependencies": {
+      "@11ty/eleventy": "^2.0.1"
+    }
+  }
