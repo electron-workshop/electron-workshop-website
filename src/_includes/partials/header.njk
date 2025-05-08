@@ -7,20 +7,6 @@
         </a>
       </div>
       
-      <nav class="main-nav" aria-label="Main Navigation">
-        <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
-          <span class="sr-only">Menu</span>
-          <span class="hamburger"></span>
-        </button>
-        
-        <ul id="main-menu" class="nav-list">
-          {% for item in site.nav %}
-            <li class="nav-item{% if page.url == item.url %} active{% endif %}">
-              <a href="{{ item.url }}">{{ item.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
     </div>
   </div>
 </header>
