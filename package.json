@@ -1,22 +1,15 @@
 {
     "name": "electron-workshop-website",
-    "version": "1.0.0",
-    "description": "Website for Electron Workshop Tech Collective Think Tank",
-    "main": "index.js",
+    "type": "module",
+    "version": "0.0.1",
     "scripts": {
-      "start": "eleventy --serve",
-      "build": "eleventy",
-      "clean": "rm -rf _site"
+      "dev": "astro dev",
+      "start": "astro dev",
+      "build": "astro build",
+      "preview": "astro preview",
+      "astro": "astro"
     },
-    "keywords": [
-      "eleventy",
-      "11ty",
-      "static-site",
-      "tech-collective"
-    ],
-    "author": "Electron Workshop",
-    "license": "MIT",
-    "devDependencies": {
-      "@11ty/eleventy": "^2.0.1"
+    "dependencies": {
+      "astro": "^4.0.0"
     }
   }
